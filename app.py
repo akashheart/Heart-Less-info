@@ -97,7 +97,7 @@ def get_player_info():
             return jsonify({
                 "status": "error",
                 "message": "Player ID is required",
-                "credits": "TEAM-AKIRU",
+                "credits": "Heart Less",
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }), 400
 
@@ -106,7 +106,7 @@ def get_player_info():
             return jsonify({
                 "status": "error",
                 "message": "Failed to generate JWT token",
-                "credits": "TEAM-AKIRU",
+                "credits": "Heart Less",
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }), 500
 
@@ -175,7 +175,7 @@ def get_player_info():
                     "status": "success",
                     "message": "Player information retrieved successfully",
                     "data": player_data,
-                    "credits": "TEAM-AKIRU",
+                    "credits": "Heart Less",
                     "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 })
 
@@ -183,14 +183,14 @@ def get_player_info():
                 return jsonify({
                     "status": "error",
                     "message": f"Failed to parse player information: {str(e)}",
-                    "credits": "TEAM-AKIRU",
+                    "credits": "Heart Less",
                     "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 }), 500
 
         return jsonify({
             "status": "error",
             "message": f"API request failed with status code: {response.status_code}",
-            "credits": "TEAM-AKIRU",
+            "credits": "Heart Less",
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }), response.status_code
 
@@ -198,7 +198,7 @@ def get_player_info():
         return jsonify({
             "status": "error",
             "message": f"An unexpected error occurred: {str(e)}",
-            "credits": "TEAM-AKIRU",
+            "credits": "Heart Less",
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }), 500
 
@@ -206,4 +206,4 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=443, debug=True)
    
   
-# Share with credits TEAM-AKIRU
+# Share with credits Heart Less
